@@ -1,0 +1,59 @@
+#SignInPage {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-items: center;
+
+	#SignInCard {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 3em;
+		padding-bottom: 3em;
+
+		.DarkMode {
+			background-color: grey;
+		}
+
+		.LightMode {
+			background-color: white;
+		}
+
+		#SignInCardHeader {
+			width: 100%;
+			text-align: center;
+			height: fit-content;
+			margin-bottom: 2em;
+
+			#SignInCardTitle {
+				width: 100%;
+				text-align: center;
+				font-size: 2em;
+			}
+		}
+
+		#SignInCardInputContainer {
+			display: block;
+			flex-direction: row;
+			justify-content: center;
+
+			#SignInButtonContainer {
+				margin-top: 2em;
+
+				height: fit-content;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+
+				#SignInButton {
+					margin-left: auto;
+					margin-right: auto;
+					width: 50%;
+				}
+			}
+		}
+	}
+}
