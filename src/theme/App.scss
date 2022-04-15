@@ -13,5 +13,11 @@ html {
 			top: 0px !important;
 			bottom: 0px !important;
 		}
+
+		.tabs-inner {
+			display: flex !important;
+			flex-direction: column !important;
+			justify-content: center !important;
+		}
 	}
 }

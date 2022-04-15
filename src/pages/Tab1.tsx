@@ -23,7 +23,7 @@ const Tab1: React.FC = () => {
 	const [text, setText] = useState('Username');
 
 	return (
-		<IonPage>
+		<IonPage id="SignInScreen">
 			<IonContent fullscreen id="SignInPage">
 				<IonHeader collapse="condense">
 					<IonToolbar>

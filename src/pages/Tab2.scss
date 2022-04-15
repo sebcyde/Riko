@@ -1,4 +1,4 @@
-#SignInPage {
+#SignUpPage {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -8,7 +8,7 @@
 	padding: 0px;
 	top: 25%;
 
-	#SignInCard {
+	#SignUpCard {
 		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
@@ -25,25 +25,25 @@
 			background-color: white;
 		}
 
-		#SignInCardHeader {
+		#SignUpCardHeader {
 			width: 100%;
 			text-align: center;
 			height: fit-content;
 			margin-bottom: 2em;
 
-			#SignInCardTitle {
+			#SignUpCardTitle {
 				width: 100%;
 				text-align: center;
 				font-size: 2em;
 			}
 		}
 
-		#SignInCardInputContainer {
+		#SignUpCardInputContainer {
 			display: block;
 			flex-direction: row;
 			justify-content: center;
 
-			#SignInButtonContainer {
+			#SignUpButtonContainer {
 				margin-top: 2em;
 
 				height: fit-content;
@@ -52,7 +52,7 @@
 				flex-direction: row;
 				justify-content: center;
 
-				#SignInButton {
+				#SignUpButton {
 					margin-left: auto;
 					margin-right: auto;
 					width: 50%;

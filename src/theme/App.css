@@ -7,4 +7,9 @@ html body #SignUpTabLabel {
 html body .inner-scroll {
   top: 0px !important;
   bottom: 0px !important;
+}
+html body .tabs-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }/*# sourceMappingURL=App.css.map */
