@@ -1,1 +1,10 @@
-/*# sourceMappingURL=App.css.map */
+html body #SignInTabLabel {
+  font-size: 17px;
+}
+html body #SignUpTabLabel {
+  font-size: 17px;
+}
+html body .inner-scroll {
+  top: 0px !important;
+  bottom: 0px !important;
+}/*# sourceMappingURL=App.css.map */

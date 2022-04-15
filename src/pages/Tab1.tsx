@@ -24,11 +24,6 @@ const Tab1: React.FC = () => {
 
 	return (
 		<IonPage>
-			<IonHeader>
-				<IonToolbar>
-					<IonTitle>Sign In</IonTitle>
-				</IonToolbar>
-			</IonHeader>
 			<IonContent fullscreen id="SignInPage">
 				<IonHeader collapse="condense">
 					<IonToolbar>
@@ -40,18 +35,21 @@ const Tab1: React.FC = () => {
 					<IonCardHeader id="SignInCardHeader">
 						<IonCardTitle id="SignInCardTitle">Welcome Back</IonCardTitle>
 						<IonCardSubtitle id="SignInCardSubtitle">
-							Log In To You Riko Account
+							Log In To Your Riko Account
 						</IonCardSubtitle>
 					</IonCardHeader>
 
 					<IonCardContent id="SignInCardInputContainer">
 						<IonItem>
-							<IonLabel position="floating">Username</IonLabel>
-							<IonInput></IonInput>
+							<IonLabel position="fixed">Username:</IonLabel>
+							<IonInput autocomplete="username"></IonInput>
 						</IonItem>
 						<IonItem>
-							<IonLabel position="floating">Password</IonLabel>
-							<IonInput type="password"></IonInput>
+							<IonLabel position="fixed">Password:</IonLabel>
+							<IonInput
+								type="password"
+								autocomplete="current-password"
+							></IonInput>
 						</IonItem>
 						<div id="SignInButtonContainer">
 							<IonButton color="danger" id="SignInButton">

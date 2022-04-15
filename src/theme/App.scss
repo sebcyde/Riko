@@ -1,0 +1,17 @@
+// Overrides
+
+html {
+	body {
+		#SignInTabLabel {
+			font-size: 17px;
+		}
+		#SignUpTabLabel {
+			font-size: 17px;
+		}
+
+		.inner-scroll {
+			top: 0px !important;
+			bottom: 0px !important;
+		}
+	}
+}

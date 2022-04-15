@@ -55,10 +55,10 @@ const App: React.FC = () => (
 				</IonRouterOutlet>
 				<IonTabBar slot="bottom">
 					<IonTabButton tab="tab1" href="/tab1">
-						<IonLabel>Sign In</IonLabel>
+						<IonLabel id="SignInTabLabel">Sign In</IonLabel>
 					</IonTabButton>
 					<IonTabButton tab="tab2" href="/tab2">
-						<IonLabel>Sign Up</IonLabel>
+						<IonLabel id="SignUpTabLabel">Sign Up</IonLabel>
 					</IonTabButton>
 				</IonTabBar>
 			</IonTabs>

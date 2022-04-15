@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   justify-items: center;
+  padding: 0px;
 }
 #SignInPage #SignInCard {
   width: 90%;
