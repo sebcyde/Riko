@@ -1,3 +1,4 @@
+import { Redirect, Route } from 'react-router-dom';
 import {
 	IonContent,
 	IonHeader,
@@ -16,11 +17,27 @@ import {
 	IonInput,
 } from '@ionic/react';
 import React, { useState } from 'react';
+import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
+import { auth } from '../Firebase';
 
 const Tab1: React.FC = () => {
-	const [text, setText] = useState('Username');
+	const [signInEmail, setsignInEmail] = useState('');
+	const [signInPassword, setsignInPassword] = useState('');
+
+	const LogIn = async () => {
+		try {
+			const User = await signInWithEmailAndPassword(
+				auth,
+				signInEmail,
+				signInPassword
+			);
+			console.log(User);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
 	return (
 		<IonPage id="SignInScreen">
@@ -42,17 +59,32 @@ const Tab1: React.FC = () => {
 					<IonCardContent id="SignInCardInputContainer">
 						<IonItem>
 							<IonLabel position="fixed">Username:</IonLabel>
-							<IonInput autocomplete="username"></IonInput>
+							<IonInput
+								autocomplete="username"
+								onChange={(event) => {
+									let Username = event.target as HTMLInputElement;
+									setsignInEmail(Username.value);
+								}}
+							></IonInput>
 						</IonItem>
 						<IonItem>
 							<IonLabel position="fixed">Password:</IonLabel>
 							<IonInput
 								type="password"
 								autocomplete="current-password"
+								onChange={(event) => {
+									let Password = event.target as HTMLInputElement;
+									setsignInPassword(Password.value);
+								}}
 							></IonInput>
 						</IonItem>
 						<div id="SignInButtonContainer">
-							<IonButton color="danger" id="SignInButton">
+							<IonButton
+								color="danger"
+								id="SignInButton"
+								routerLink="/Loadscreen"
+								onClick={LogIn}
+							>
 								Sign In
 							</IonButton>
 						</div>

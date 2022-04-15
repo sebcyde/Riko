@@ -8,11 +8,14 @@ import {
 	IonTabButton,
 	IonTabs,
 	setupIonicReact,
+	useIonLoading,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
+import { LoadScreen } from './pages/LoadScreen';
+import { Dashboard } from './pages/Dashboard';
+import { auth } from './Firebase';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -35,6 +38,7 @@ import './theme/variables.css';
 
 /* Styles */
 import './theme/App.css';
+import { useState } from 'react';
 
 setupIonicReact();
 
@@ -43,21 +47,29 @@ const App: React.FC = () => (
 		<IonReactRouter>
 			<IonTabs>
 				<IonRouterOutlet>
-					<Route exact path="/tab1">
+					<Route exact path="/SignIn">
 						<Tab1 />
 					</Route>
-					<Route exact path="/tab2">
+					<Route exact path="/SignUp">
 						<Tab2 />
 					</Route>
 					<Route exact path="/">
-						<Redirect to="/tab1" />
+						<Redirect to="/SignIn" />
 					</Route>
+					<Route path="/Loadscreen" component={LoadScreen} />
+					<Route path="/Dashboard" component={Dashboard} />
+					{/* <Route
+						path="/Dashboard"
+						render={(props) => {
+							auth ? <Dashboard {...props} /> : <Tab1 />;
+						}}
+					/> */}
 				</IonRouterOutlet>
 				<IonTabBar slot="bottom">
-					<IonTabButton tab="tab1" href="/tab1">
+					<IonTabButton tab="SignIn" href="/SignIn">
 						<IonLabel id="SignInTabLabel">Sign In</IonLabel>
 					</IonTabButton>
-					<IonTabButton tab="tab2" href="/tab2">
+					<IonTabButton tab="SignUp" href="/SignUp">
 						<IonLabel id="SignUpTabLabel">Sign Up</IonLabel>
 					</IonTabButton>
 				</IonTabBar>
