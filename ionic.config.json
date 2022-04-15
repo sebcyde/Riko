@@ -1,0 +1,7 @@
+{
+  "name": "Riko",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
