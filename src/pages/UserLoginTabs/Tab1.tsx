@@ -18,9 +18,8 @@ import {
 } from '@ionic/react';
 import React, { useState } from 'react';
 import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
-import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
-import { auth } from '../Firebase';
+import { auth } from '../../Firebase';
 
 const Tab1: React.FC = () => {
 	const [signInEmail, setsignInEmail] = useState('');

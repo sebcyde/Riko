@@ -16,8 +16,7 @@ import {
 	IonInput,
 } from '@ionic/react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../Firebase';
-import ExploreContainer from '../components/ExploreContainer';
+import { auth } from '../../Firebase';
 import './Tab2.css';
 import { useState } from 'react';
 

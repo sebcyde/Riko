@@ -11,8 +11,8 @@ import {
 	useIonLoading,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
+import Tab1 from './pages/UserLoginTabs/Tab1';
+import Tab2 from './pages/UserLoginTabs/Tab2';
 import { LoadScreen } from './pages/LoadScreen';
 import { Dashboard } from './pages/Dashboard';
 import { auth } from './Firebase';
