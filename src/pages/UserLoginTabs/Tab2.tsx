@@ -53,7 +53,7 @@ const Tab2: React.FC = () => {
 							<IonLabel position="fixed">Username:</IonLabel>
 							<IonInput
 								id="NewUsername"
-								onChange={(event) => {
+								onIonChange={(event) => {
 									let NewUsername = event.target as HTMLInputElement;
 									setregisterEmail(NewUsername.value);
 									console.log(registerEmail);
@@ -65,7 +65,7 @@ const Tab2: React.FC = () => {
 							<IonInput
 								type="password"
 								id="NewPassword"
-								onChange={(event) => {
+								onIonChange={(event) => {
 									let NewPassword = event.target as HTMLInputElement;
 									setregisterPassword(NewPassword.value);
 									console.log(registerPassword);

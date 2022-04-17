@@ -60,7 +60,7 @@ const Tab1: React.FC = () => {
 							<IonLabel position="fixed">Username:</IonLabel>
 							<IonInput
 								autocomplete="username"
-								onChange={(event) => {
+								onIonChange={(event) => {
 									let Username = event.target as HTMLInputElement;
 									setsignInEmail(Username.value);
 								}}
@@ -71,19 +71,14 @@ const Tab1: React.FC = () => {
 							<IonInput
 								type="password"
 								autocomplete="current-password"
-								onChange={(event) => {
+								onIonChange={(event) => {
 									let Password = event.target as HTMLInputElement;
 									setsignInPassword(Password.value);
 								}}
 							></IonInput>
 						</IonItem>
 						<div id="SignInButtonContainer">
-							<IonButton
-								color="danger"
-								id="SignInButton"
-								routerLink="/Loadscreen"
-								onClick={LogIn}
-							>
+							<IonButton color="danger" id="SignInButton" onClick={LogIn}>
 								Sign In
 							</IonButton>
 						</div>
